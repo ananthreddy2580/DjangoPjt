@@ -1,4 +1,4 @@
-from django.http import JsonResponse
+from django.http import JsonResponse,HttpResponse
 from django.middleware.csrf import get_token
 from django.views.decorators.csrf import csrf_exempt
 import json
@@ -7,6 +7,10 @@ from .models import Visitor
 # CSRF token endpoint
 def get_csrf_token(request):
     return JsonResponse({"csrfToken": get_token(request)})
+
+def home(request):
+    return HttpResponse("Welcome to the Visitor API! Use /visitors/ to submit data.")
+
 
 @csrf_exempt  # Temporary for debugging, later use proper CSRF handling
 def visitor_submission(request):
