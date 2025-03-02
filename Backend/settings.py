@@ -91,6 +91,7 @@ CSRF_COOKIE_SECURE = False  # Set to True in production (HTTPS)
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",  # Allow your React frontend
+    "https://reactpjt.onrender.com/"
 ]
 
 CORS_ALLOW_CREDENTIALS = True  # Allow credentials (cookies)
@@ -102,6 +103,7 @@ CORS_ALLOW_HEADERS = [
 
 CSRF_TRUSTED_ORIGINS = [
     "http://localhost:5173",  # Allow React frontend for CSRF
+    "https://reactpjt.onrender.com/"
 ]
 
 CSRF_COOKIE_HTTPONLY = False  # Allow JavaScript to access CSRF token
