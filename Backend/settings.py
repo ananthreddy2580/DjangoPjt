@@ -180,10 +180,12 @@ CORS_ALLOW_METHODS = [
 CORS_ALLOW_ALL_ORIGINS = False  # Set False for security
 CORS_ALLOWED_ORIGINS = [
     "https://reactpjt.onrender.com",  # Your React frontend URL
+    "http://localhost:5173"
 ]
 
 CSRF_TRUSTED_ORIGINS = [
     "https://reactpjt.onrender.com",  # Trust React app for CSRF
+    "http://localhost:5173"
 ]
 
 CORS_ALLOW_CREDENTIALS = True
